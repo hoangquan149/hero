@@ -1,9 +1,10 @@
 import { useForm, Controller } from "react-hook-form";
 import { Button, Grid, TextField } from "@mui/material";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
+import HeroSearch from "../../../types/HeroSearch";
 interface FilterProps {
    onOpenForm: () => void;
-   onSearch: (data: Object) => void;
+   onSearch: (data: HeroSearch) => void;
 }
 
 export default function Filter(props: FilterProps) {

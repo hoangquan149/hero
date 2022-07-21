@@ -53,7 +53,7 @@ export default function Form(props: FormProps) {
       },
    });
 
-   const [file, setFile] = React.useState<any>();
+   const [file, setFile] = React.useState<string>();
    const [actions, setActions] = React.useState<Array<Action>>([]);
 
    React.useEffect(() => {
@@ -62,9 +62,10 @@ export default function Form(props: FormProps) {
 
    const imageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
       const files: any = e.target.files;
+      console.log(e.target.files);
       getBase64(files[0]).then((base64) => {
          setValue("image", base64 as string);
-         setFile(base64);
+         setFile(base64 as string);
       });
    };
 

@@ -1,11 +1,12 @@
 import { Typography } from "@mui/material";
 
 import Modal from "../../../commons/components/Modal";
+import Hero from "../../../types/Hero";
 
 interface DetailProps {
    openDetail: boolean;
    closeOpenDetail: () => void;
-   heroDetail: any;
+   heroDetail: Hero;
 }
 
 export default function Detail(props: DetailProps) {

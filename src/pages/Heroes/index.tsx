@@ -10,6 +10,7 @@ import Detail from "./components/Detail";
 import Hero from "../../types/Hero";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "../../styles/pages/Heroes.scss";
+import HeroSearch from "../../types/HeroSearch";
 
 export default function Heroes() {
    const { save, get } = useLocalStorage();
@@ -20,7 +21,7 @@ export default function Heroes() {
 
    const filterRef = useRef<Array<Hero>>();
 
-   const detailHeroRef = useRef<any>();
+   const detailHeroRef = useRef<Hero>();
 
    useEffect(() => {
       if (!_.isEmpty(filterRef.current)) return;
@@ -34,7 +35,7 @@ export default function Heroes() {
       return () => clearTimeout(timeout);
    }, []);
 
-   const onSearch = (params: any) => {
+   const onSearch = (params: HeroSearch) => {
       let newData: Hero[] = [];
       if (params && !params.name) {
          newData = get();
@@ -145,7 +146,7 @@ export default function Heroes() {
             <Detail
                openDetail={openDetail}
                closeOpenDetail={closeOpenDetail}
-               heroDetail={detailHeroRef.current}
+               heroDetail={detailHeroRef.current as Hero}
             />
          )}
       </>
