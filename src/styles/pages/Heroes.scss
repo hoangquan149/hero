@@ -1,0 +1,48 @@
+.box-list-heroes {
+   height: calc(100vh - 180px);
+   min-height: 550px;
+}
+
+.box-content-heroes {
+   width: 100%;
+   height: calc(100vh - 160px);
+}
+
+.modal-form-hero {
+   .MuiDialog-container {
+      .MuiPaper-root {
+         .MuiDialogContent-root {
+            .box-image {
+               width: 100px;
+               height: 100px;
+               position: relative;
+               border: 1px #ededed dashed;
+            }
+            .box-image {
+               //  &__delete {
+               //     font-size: 25px;
+               //     position: absolute;
+               //     right: -10px;
+               //     top: -1px;
+               //     color: #c31f1f;
+               //     cursor: pointer;
+               //  }
+            }
+         }
+      }
+   }
+}
+
+.modal-detail {
+   .MuiDialog-container {
+      // max-width: unset;
+      // height: 500px;
+      .MuiPaper-root {
+         width: 20%;
+         height: 400px;
+
+         .MuiDialogContent-root {
+         }
+      }
+   }
+}

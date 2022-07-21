@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap");
+
+*,
+body {
+   margin: 0;
+   padding: 0;
+   font-family: "Cabin", sans-serif;
+   font-size: 12px;
+}
+
+.d-flex {
+   display: flex;
+}
+
+.w-100 {
+   width: 100%;
+}
+
+.main-body {
+   padding: 0 9px;
+}
+
+.MuiButton-root {
+   height: 34.25px;
+}
+
+li {
+   list-style: none;
+}
+
+ul {
+   padding: 0;
+   margin: 0;
+}
+
+.page-content-wrapper {
+   flex: 1;
+}
+
+.common-btn-reset {
+   padding: 0 !important;
+   min-width: 30px I !important;
+   &:hover {
+      background-color: unset !important;
+   }
+}

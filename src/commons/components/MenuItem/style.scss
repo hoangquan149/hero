@@ -1,0 +1,25 @@
+.menu-item{
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 50px;
+  &.active {
+    background-color: rgba(#fff, 0.1) ;
+  }
+}
+
+
+.MuiList-root{
+  .MuiMenuItem-root{
+    .MuiListItemIcon-root {
+      color: #fff;
+    }
+
+    .MuiListItemText-root{
+      .MuiTypography-root{
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+

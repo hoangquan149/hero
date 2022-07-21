@@ -1,0 +1,36 @@
+.common-modal {
+   &__title {
+   }
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__text {
+      font-size: initial;
+   }
+   &__icon {
+      font-size: 30px;
+      cursor: pointer;
+   }
+
+   .MuiDialog-container {
+      .MuiPaper-root {
+         width: 35%;
+         max-width: unset;
+         height: 500px;
+         .MuiDialogContent-root {
+            padding: 10px 24px;
+            .MuiButtonBase-root {
+               padding: 5px 8px;
+               // background-color: #ededed;
+               border-radius: 5px;
+            }
+         }
+         .MuiDialogActions-root {
+            padding: 16px 24px;
+         }
+      }
+   }
+}

@@ -1,0 +1,18 @@
+.wrapper {
+   background: #222527;
+   width: 240px !important;
+   height: 100vh;
+
+   .menu-item {
+      display: flex;
+      align-items: center;
+      height: 50px;
+   }
+
+   .title {
+      padding: 13px;
+      font-size: 20px;
+      text-align: center;
+      color: #ffffff;
+   }
+}
