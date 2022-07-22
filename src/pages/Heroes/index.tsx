@@ -39,15 +39,14 @@ export default function Heroes() {
       let newData: Hero[] = [];
       if (params && !params.name) {
          newData = get();
-         setListHero(newData);
          filterRef.current = [];
       } else {
          newData = [...listHero].filter((hero, index) => {
             return hero.name.includes(params.name);
          });
          filterRef.current = newData;
-         setListHero(newData);
       }
+      setListHero(newData);
    };
 
    const addHero = (data: Hero) => {
