@@ -124,6 +124,7 @@ export default function Heroes() {
          >
             <div className={"box-content-heroes"}>
                <DataGrid
+                  style={{ width: "100%" }}
                   loading={loading}
                   rows={listHero}
                   columns={columns}

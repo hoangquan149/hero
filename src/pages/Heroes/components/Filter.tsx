@@ -24,7 +24,7 @@ export default function Filter(props: FilterProps) {
       <div style={{ marginTop: 10 }}>
          <form onSubmit={handleSubmit(onSearch)}>
             <Grid container spacing={1}>
-               <Grid item xs={2}>
+               <Grid item md={2} xs={12} sm={2}>
                   <Button
                      onClick={() => onOpenForm()}
                      variant="outlined"
@@ -34,8 +34,8 @@ export default function Filter(props: FilterProps) {
                      Thêm mới
                   </Button>
                </Grid>
-               <Grid item xs={4}></Grid>
-               <Grid item xs={4}>
+               <Grid item md={4} xs={12} sm={3}></Grid>
+               <Grid item md={4} xs={6} sm={4}>
                   <Controller
                      control={control}
                      name={"name"}
@@ -50,7 +50,7 @@ export default function Filter(props: FilterProps) {
                      )}
                   />
                </Grid>
-               <Grid item xs={2}>
+               <Grid item md={2} xs={6} sm={3}>
                   <div className="d-flex">
                      <Button
                         title="Reset tìm kiếm"

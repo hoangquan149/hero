@@ -42,6 +42,7 @@ export default function Form(props: FormProps) {
       control,
       handleSubmit,
       setValue,
+      watch,
       formState: { errors },
    } = useForm({
       defaultValues: {
@@ -60,12 +61,14 @@ export default function Form(props: FormProps) {
       setActions([{ title: "Thêm mới", onClick: handleSubmit(onSubmit) }]);
    }, []);
 
+   console.log(watch("name"), "watch");
+
    const imageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
       const files: any = e.target.files;
       console.log(e.target.files);
       getBase64(files[0]).then((base64) => {
-         setValue("image", base64 as string);
          setFile(base64 as string);
+         setValue("image", base64 as string);
       });
    };
 
