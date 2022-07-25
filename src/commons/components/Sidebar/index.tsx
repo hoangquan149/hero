@@ -1,48 +1,45 @@
-import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
-import classNames from "classnames/bind";
-import MenuList from '@mui/material/MenuList';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import MenuList from "@mui/material/MenuList";
 import MenuItem from "../MenuItem";
 import APP_MENUS from "../../../models";
-import styles from './style.module.scss'
-
-const cx = classNames.bind(styles)
+import "./style.scss";
 
 function SideBar() {
-    const navigate = useNavigate()
-    const [keyActive,setKeyActive] = useState<string>(APP_MENUS[0].key);
+   const navigate = useNavigate();
+   const [keyActive, setKeyActive] = useState<string>(APP_MENUS[0].key);
 
-    useEffect(() => {
-        if (window.location.pathname) {
-            if (window.location.pathname === '/') {
-                setKeyActive(APP_MENUS[0].key)
-            }else{
-                setKeyActive(window.location.pathname.slice(1))
-            }
-        }
-    },[])
+   useEffect(() => {
+      if (window.location.pathname) {
+         if (window.location.pathname === "/") {
+            setKeyActive(APP_MENUS[0].key);
+         } else {
+            setKeyActive(window.location.pathname.slice(1));
+         }
+      }
+   }, []);
 
-    const handleChangeKey = (key:string): void => {
-        if (!key) return
-        setKeyActive(key)
-        navigate(key)
-    }
+   const handleChangeKey = (key: string): void => {
+      if (!key) return;
+      setKeyActive(key);
+      navigate(key);
+   };
 
-    return <div className={cx('wrapper')}>
-        <div className={cx('title')}>
-            HEROES
-        </div>
-        <MenuList>
-            {APP_MENUS.map((menuInfo,index) =>(
-                <MenuItem
-                    key={index}
-                    menuInfo={menuInfo}
-                    keyActive={keyActive}
-                    handleChangeKey={handleChangeKey}
-                />
+   return (
+      <div className={"sidebar-wrapper"}>
+         <div className={"sidebar-title"}>HEROES</div>
+         <MenuList>
+            {APP_MENUS.map((menuInfo, index) => (
+               <MenuItem
+                  key={index}
+                  menuInfo={menuInfo}
+                  keyActive={keyActive}
+                  handleChangeKey={handleChangeKey}
+               />
             ))}
-        </MenuList>
-    </div>
+         </MenuList>
+      </div>
+   );
 }
 
-export default SideBar
+export default SideBar;

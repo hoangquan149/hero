@@ -1,15 +1,29 @@
 import React from "react";
-import classNames from "classnames/bind";
-import styles from "./style.module.scss";
-
-const cx = classNames.bind(styles);
+import DehazeIcon from "@mui/icons-material/Dehaze";
+import { Link, useNavigate } from "react-router-dom";
+import "./style.scss";
+import APP_MENUS from "../../../models";
 
 function Header() {
+   const navigate = useNavigate();
+
+   const navigatePage = (path: string) => {
+      navigate(path);
+   };
+
    return (
-      <div className={cx("wrapper")}>
+      <div className={"header-wrapper"}>
          <nav>
-            <ul className={cx("actions")}>
-               <li className={cx("actions-item")}></li>
+            <ul className={"header-actions"}>
+               {APP_MENUS.map((menu, index) => (
+                  <li
+                     className={"header-actions-item"}
+                     onClick={() => navigatePage(menu.link)}
+                     style={{ cursor: "pointer" }}
+                  >
+                     {menu.title}
+                  </li>
+               ))}
             </ul>
          </nav>
       </div>

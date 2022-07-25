@@ -1,4 +1,4 @@
-.wrapper {
+.sidebar-wrapper {
    background: #222527;
    width: 240px !important;
    height: 100vh;
@@ -9,7 +9,7 @@
       height: 50px;
    }
 
-   .title {
+   .sidebar-title {
       padding: 13px;
       font-size: 20px;
       text-align: center;
@@ -22,13 +22,14 @@
 }
 //tablet
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
-   .wrapper {
+   .sidebar-wrapper {
+      // width: 200px !important;
       display: none;
    }
 }
 //mobile
 @media only screen and (max-width: 740px) {
-   .wrapper {
+   .sidebar-wrapper {
       display: none;
    }
 }

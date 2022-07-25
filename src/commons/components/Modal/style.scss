@@ -34,17 +34,3 @@
       }
    }
 }
-
-@media only screen and (max-width: 740px) {
-   .common-modal {
-      .MuiDialog-container {
-         .MuiPaper-root {
-            width: 100%;
-            height: 80vh;
-            // margin: 0;
-            // max-width: unset;
-            // height: 500px;
-         }
-      }
-   }
-}

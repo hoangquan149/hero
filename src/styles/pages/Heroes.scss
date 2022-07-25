@@ -59,4 +59,22 @@
       height: calc(100vh - 80px);
       min-height: 100%;
    }
+
+   .modal-form-hero {
+      .MuiDialog-container {
+         .MuiPaper-root {
+            width: 100%;
+            height: 80vh;
+         }
+      }
+   }
+
+   .modal-detail {
+      .MuiDialog-container {
+         .MuiPaper-root {
+            width: 100%;
+            height: 50vh;
+         }
+      }
+   }
 }
